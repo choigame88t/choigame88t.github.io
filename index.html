@@ -11,10 +11,11 @@
     <meta property="og:image" content="https://choigame88t.github.io/banner.jpg">
     <link rel="canonical" href="https://choigame88t.github.io/">
     <link rel="icon" href="https://choigame88t.github.io/logo.png" type="image/png">
+
     <style>
         *{margin:0;padding:0;box-sizing:border-box;}
         body{font-family:'Segoe UI',Arial,sans-serif;background:#000;color:#fff;}
-        img{loading:lazy;display:block;width:100%;height:auto;}
+        img{loading:lazy;display:block;max-width:100%;height:auto;}
 
         header{background:linear-gradient(90deg,#ff6b35,#f7931e);padding:20px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;min-height:120px;}
         .logo{width:130px;height:130px;border-radius:50%;border:6px solid #ffd700;box-shadow:0 0 30px gold;object-fit:contain;background:#000;}
@@ -32,42 +33,80 @@
         h1.title{text-align:center;font-size:3.2rem;color:#ffd700;margin:30px 0;text-shadow:0 0 20px #000, 3px 3px 0 #c0392b;}
         .banner{max-width:1400px;margin:20px auto;border-radius:20px;border:5px solid gold;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
 
-        .games,.blog-section{padding:60px 20px;max-width:1200px;margin:auto;}
+        .section{padding:70px 20px;}
         .section-title{font-size:2.6rem;text-align:center;color:#ffd700;margin-bottom:50px;position:relative;}
         .section-title::after{content:'';width:100px;height:4px;background:#ffd700;display:block;margin:15px auto 0;}
 
-        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1100px;margin:auto;}
-        .card{background:#111;border-radius:18px;padding:30px 20px;text-align:center;transition:0.4s;border:3px solid transparent;overflow:hidden;}
-        .card:hover{transform:translateY(-15px);border:3px solid #ffd700;box-shadow:0 15px 40px rgba(255,215,0,0.4);}
-        .card img{width:90px;height:90px;border-radius:50%;border:4px solid #ffd700;margin:0 auto 15px;object-fit:cover;background:#000;}
-        .card h3{color:#ffd700;font-size:1.3rem;margin:15px 0 8px;}
-        .card p{font-size:0.95rem;color:#aaa;line-height:1.5;}
+        /* 2 hàng × 4 ô – cố định đẹp */
+        .grid-4cols{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:30px;
+            max-width:1200px;
+            margin:0 auto;
+        }
+        .card{
+            background:#111;
+            border-radius:18px;
+            padding:30px 15px;
+            text-align:center;
+            transition:0.4s;
+            border:3px solid transparent;
+        }
+        .card:hover{
+            transform:translateY(-15px);
+            border:3px solid #ffd700;
+            box-shadow:0 15px 40px rgba(255,215,0,0.4);
+        }
+        .card img{
+            width:90px;height:90px;border-radius:50%;border:4px solid #ffd700;margin:0 auto 15px;object-fit:cover;background:#000;
+        }
+        .card h3{color:#ffd700;font-size:1.3rem;margin:10px 0;}
 
-        /* FOOTER XANH LÁ SIÊU ĐẸP - KHÔNG VỠ ICON */
-        footer{background:#006400;color:#fff;padding:70px 20px 30px;margin-top:80px;}
-        .footer-main{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:50px;max-width:1300px;margin:auto;}
+        /* 8 ô bài viết (tự động xuống hàng khi màn nhỏ) */
+        .grid-auto{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+            gap:30px;
+            max-width:1200px;
+            margin:0 auto;
+        }
+
+        /* Footer xanh lá */
+        footer{background:#006400;color:#fff;padding:80px 20px 30px;margin-top:80px;}
+        .footer-main{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:50px;
+            max-width:1300px;
+            margin:auto;
+        }
         .footer-col h3{color:#FFD700;font-size:1.8rem;margin-bottom:25px;padding-bottom:12px;border-bottom:4px solid #FFD700;display:inline-block;}
         .footer-col a,.footer-col p{color:#ddd;margin:18px 0;display:block;text-decoration:none;font-size:1.1rem;transition:0.3s;}
         .footer-col a:hover{color:#fff;transform:translateX(8px);}
 
         .contact-icons{
-            display:flex;gap:28px;margin-top:30px;flex-wrap:wrap;align-items:center;
+            display:flex;gap:30px;margin-top:30px;flex-wrap:wrap;align-items:center;
         }
         .contact-icons a img{
-            width:58px;height:58px;border-radius:50%;transition:all 0.3s;border:3px solid transparent;box-shadow:0 4px 15px rgba(0,0,0,0.4);
+            width:62px;height:62px;border-radius:50%;transition:all 0.3s;border:3px solid transparent;box-shadow:0 5px 20px rgba(0,0,0,0.5);
         }
         .contact-icons a:hover img{
-            transform:scale(1.25);border-color:#FFD700;box-shadow:0 8px 25px rgba(255,215,0,0.5);
+            transform:scale(1.3);border-color:#FFD700;box-shadow:0 10px 30px rgba(255,215,0,0.6);
         }
 
         .copyright{
             text-align:center;padding:30px;background:#003300;margin-top:50px;font-size:1rem;border-top:1px solid #004d00;
         }
 
-        @media(max-width:768px){
-            h1.title{font-size:2.5rem;}
+        @media(max-width:992px){
+            .grid-4cols{grid-template-columns:repeat(2,1fr);}
+            h1.title{font-size:2.6rem;}
+        }
+        @media(max-width:576px){
+            .grid-4cols{grid-template-columns:1fr;}
             .btn{font-size:1.1rem;padding:12px 25px;}
-            .contact-icons a img{width:50px;height:50px;}
+            .contact-icons a img{width:55px;height:55px;}
         }
     </style>
 </head>
@@ -94,10 +133,10 @@
     <h1 class="title">Chơi Game 88T – Uy Tín Số 1 Việt Nam 2025</h1>
     <img src="https://choigame88t.github.io/banner.jpg" alt="Banner Chơi Game 88T" class="banner">
 
-    <!-- 8 Ô SẢN PHẨM -->
-    <section class="games" id="games">
+    <!-- SẢN PHẨM: 2 HÀNG × 4 Ô -->
+    <section class="section" id="games">
         <h2 class="section-title">Sản Phẩm Hot Nhất</h2>
-        <div class="grid">
+        <div class="grid-4cols">
             <div class="card"><img src="https://choigame88t.github.io/logo.png" alt="Casino"><h3>Casino Trực Tuyến</h3></div>
             <div class="card"><img src="https://choigame88t.github.io/logo.png" alt="Nổ Hũ"><h3>Nổ Hũ Jackpot</h3></div>
             <div class="card"><img src="https://choigame88t.github.io/logo.png" alt="Thể Thao"><h3>Cá Cược Thể Thao</h3></div>
@@ -109,10 +148,10 @@
         </div>
     </section>
 
-    <!-- 8 Ô BÀI VIẾT / HƯỚNG DẪN MỚI -->
-    <section class="blog-section" id="blog">
+    <!-- 8 Ô HƯỚNG DẪN / BÀI VIẾT -->
+    <section class="section blog-section" id="blog">
         <h2 class="section-title">Hướng Dẫn & Tin Tức Mới Nhất</h2>
-        <div class="grid">
+        <div class="grid-auto">
             <div class="card"><h3>Hướng dẫn đăng ký 88T mới nhất 2025</h3><p>Chỉ 30 giây có tài khoản – nhận ngay giftcode tân thủ</p></div>
             <div class="card"><h3>Cách nạp tiền siêu nhanh qua Momo</h3><p>Tỷ lệ 1:1 – tiền về ngay trong 10 giây</p></div>
             <div class="card"><h3>Hướng dẫn rút tiền về ngân hàng</h3><p>Rút không giới hạn – duyệt tự động 24/7</p></div>
@@ -120,11 +159,11 @@
             <div class="card"><h3>Cách chơi Nổ Hũ thắng lớn</h3><p>Mẹo quay hũ dễ nổ từ cao thủ 88T</p></div>
             <div class="card"><h3>Khuyến mãi hoàn tiền hàng tuần</h3><p>Hoàn tới 1.5% không giới hạn mỗi tuần</p></div>
             <div class="card"><h3>Sự kiện sinh nhật thành viên</h3><p>Quà tặng lên đến 88 triệu mỗi tháng</p></div>
-            <div class="card"><h3>Tại sao nên chọn Chơi Game 88T?</h3><p>Uy tín 5 năm – nạp rút nhanh nhất VN</p></div>
+            <div class="card"><h3>Tại sao chọn Chơi Game 88T?</h3><p>Uy tín 5 năm – nạp rút nhanh nhất VN</p></div>
         </div>
     </section>
 
-    <!-- FOOTER SIÊU ĐẸP - ICON KHÔNG VỠ -->
+    <!-- FOOTER – ĐÃ BỎ TELEGRAM -->
     <footer>
         <div class="footer-main">
             <div class="footer-col">
@@ -143,14 +182,13 @@
             <div class="footer-col">
                 <h3>LIÊN HỆ</h3>
                 <p>Hotline: 0988.888.888</p>
-                <p>Zalo/Telegram: @Game88T</p>
+                <p>Zalo: @Game88T</p>
                 <p>Email: support@choigame88t.com</p>
                 <div class="contact-icons">
-                    <a href="#" aria-label="Zalo"><img src="https://img.icons8.com/color/96/zalo.png" alt="Zalo" width="58" height="58"></a>
-                    <a href="#" aria-label="Telegram"><img src="https://img.icons8.com/fluency/96/telegram.png" alt="Telegram" width="58" height="58"></a>
-                    <a href="mailto:support@choigame88t.com"><img src="https://img.icons8.com/fluency/96/gmail-new.png" alt="Email" width="58" height="58"></a>
-                    <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/color/96/facebook-new.png" alt="Facebook" width="58" height="58"></a>
-                    <a href="#" aria-label="TikTok"><img src="https://img.icons8.com/fluency/96/tiktok.png" alt="TikTok" width="58" height="58"></a>
+                    <a href="#" aria-label="Zalo"><img src="https://img.icons8.com/color/96/zalo.png" alt="Zalo" width="62" height="62"></a>
+                    <a href="mailto:support@choigame88t.com"><img src="https://img.icons8.com/fluency/96/gmail-new.png" alt="Email" width="62" height="62"></a>
+                    <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/color/96/facebook-new.png" alt="Facebook" width="62" height="62"></a>
+                    <a href="#" aria-label="TikTok"><img src="https://img.icons8.com/fluency/96/tiktok.png" alt="TikTok" width="62" height="62"></a>
                 </div>
             </div>
         </div>
