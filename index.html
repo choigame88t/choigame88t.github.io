@@ -34,42 +34,51 @@
         h1.title{text-align:center;font-size:3.2rem;color:#ffd700;margin:30px 0;text-shadow:0 0 20px #000, 3px 3px 0 #c0392b;}
         .banner{max-width:1400px;margin:20px auto;border-radius:20px;border:5px solid gold;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
 
-        /* NÚT ĐỎ ĐẸP NHƯ ẢNH */
-        .big-cta{display:block;margin:50px auto;text-align:center;}
-        .big-cta a{
-            display:inline-block;background:#e74c3c;color:#fff;padding:22px 60px;border-radius:50px;
-            font-size:2rem;font-weight:bold;box-shadow:0 0 40px rgba(231,76,60,0.8);
-            text-transform:uppercase;letter-spacing:2px;position:relative;overflow:hidden;
-        }
-        .big-cta a::after{content:'';position:absolute;top:50%;left:50%;width:0;height:0;background:rgba(255,255,255,0.3);border-radius:50%;transform:translate(-50%,-50%);transition:0.6s;}
-        .big-cta a:hover::after{width:300px;height:300px;}
+        /* NÚT ĐỎ SIÊU ĐẸP */
+        .big-cta{margin:60px auto;text-align:center;}
+        .big-cta a{display:inline-block;background:#e74c3c;color:#fff;padding:24px 70px;border-radius:60px;font-size:2.1rem;font-weight:bold;
+            box-shadow:0 0 50px rgba(231,76,60,0.9);text-transform:uppercase;position:relative;overflow:hidden;}
+        .big-cta a span{font-size:2.6rem;display:block;}
+        .big-cta a:hover{transform:scale(1.05);}
+
+        /* BÀI VIẾT GIỮA TRANG – CHUẨN SEO */
+        .intro-section{padding:80px 20px;background:#111;max-width:1200px;margin:50px auto 80px;border-radius:25px;box-shadow:0 10px 50px rgba(255,215,0,0.15);}
+        .intro-section h2{font-size:2.9rem;text-align:center;color:#ffd700;margin-bottom:35px;}
+        .intro-section h3{font-size:2.2rem;color:#ffd700;margin:40px 0 20px;}
+        .intro-section h4{font-size:1.75rem;color:#ff6b35;margin:25px 0 15px;}
+        .intro-section p{font-size:1.18rem;color:#eee;text-align:justify;margin-bottom:22px;}
+        .intro-section ul{margin:30px 0;padding-left:45px;}
+        .intro-section ul li{font-size:1.15rem;color:#ddd;margin:15px 0;}
+        .intro-section img{border-radius:18px;border:5px solid #ffd700;box-shadow:0 15px 40px rgba(0,0,0,0.7);margin:40px auto;}
+        .cta-end{text-align:center;margin-top:50px;}
+        .cta-end a{display:inline-block;padding:22px 70px;background:#e74c3c;color:#fff;font-size:1.8rem;font-weight:bold;border-radius:60px;
+            box-shadow:0 0 40px #e74c3c;animation:glow 2s infinite;}
 
         .section{padding:70px 20px;}
         .section-title{font-size:2.8rem;text-align:center;color:#ffd700;margin-bottom:60px;position:relative;}
-        .section-title::after{content:'';width:100px;height:4px;background:#ffd700;display:block;margin:15px auto 0;}
+        .section-title::after{content:'';width:120px;height:5px;background:#ffd700;display:block;margin:15px auto 0;}
 
-        .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:1200px;margin:0 auto;}
-        .card-game{background:#111;border-radius:20px;overflow:hidden;transition:0.4s;box-shadow:0 5px 20px rgba(0,0,0,0.6);}
-        .card-game:hover{transform:translateY(-15px);box-shadow:0 20px 40px rgba(255,215,0,0.3);}
-        .card-game img{width:120px;height:120px;margin:30px auto 15px;object-fit:contain;}
-        .card-game h3{color:#ffd700;font-size:1.4rem;text-align:center;padding-bottom:20px;}
+        .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:35px;max-width:1200px;margin:0 auto;}
+        .card-game{background:#111;border-radius:25px;overflow:hidden;transition:0.4s;box-shadow:0 8px 25px rgba(0,0,0,0.6);}
+        .card-game:hover{transform:translateY(-18px);box-shadow:0 25px 50px rgba(255,215,0,0.3);}
+        .card-game img{width:130px;height:130px;margin:35px auto 20px;object-fit:contain;}
+        .card-game h3{color:#ffd700;font-size:1.45rem;text-align:center;padding-bottom:25px;}
 
-        .grid-blog{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:35px;max-width:1200px;margin:0 auto;}
-        .card-blog{background:#111;border-radius:20px;padding:30px;transition:0.4s;border:2px solid transparent;}
-        .card-blog:hover{border:2px solid #ffd700;transform:translateY(-10px);box-shadow:0 15px 35px rgba(255,215,0,0.2);}
-        .card-blog h3{color:#ffd700;font-size:1.35rem;margin-bottom:15px;line-height:1.4;}
-        .card-blog p{color:#ccc;font-size:1.05rem;}
-        .card-blog a{color:#ff6b35;font-weight:bold;}
+        .grid-blog{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;max-width:1200px;margin:0 auto;}
+        .card-blog{background:#111;border-radius:22px;padding:35px;transition:0.4s;border:2px solid transparent;}
+        .card-blog:hover{border:2px solid #ffd700;transform:translateY(-12px);box-shadow:0 20px 40px rgba(255,215,0,0.2);}
+        .card-blog h3{color:#ffd700;font-size:1.4rem;margin-bottom:15px;line-height:1.4;}
+        .card-blog p{color:#bbb;font-size:1.05rem;}
 
-        footer{background:#006400;color:#fff;padding:80px 20px 30px;}
+        footer{background:#006400;color:#fff;padding:80px 20px 30px;margin-top:100px;}
         .footer-main{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:50px;max-width:1300px;margin:auto;}
-        .footer-col h3{color:#FFD700;font-size:1.8rem;margin-bottom:25px;padding-bottom:12px;border-bottom:4px solid #FFD700;display:inline-block;}
+        .footer-col h3{color:#FFD700;font-size:1.9rem;margin-bottom:25px;padding-bottom:12px;border-bottom:5px solid #FFD700;display:inline-block;}
         .footer-col a,.footer-col p{color:#ddd;margin:18px 0;display:block;font-size:1.1rem;transition:0.3s;}
-        .footer-col a:hover{color:#fff;transform:translateX(8px);}
-        .contact-icons{display:flex;gap:30px;margin-top:30px;flex-wrap:wrap;}
-        .contact-icons a img{width:62px;height:62px;border-radius:50%;transition:all 0.3s;box-shadow:0 5px 20px rgba(0,0,0,0.5);}
-        .contact-icons a:hover img{transform:scale(1.3);box-shadow:0 10px 30px rgba(255,215,0,0.6);}
-        .copyright{text-align:center;padding:30px;background:#003300;margin-top:50px;font-size:1rem;border-top:1px solid #004d00;}
+        .footer-col a:hover{color:#fff;transform:translateX(10px);}
+        .contact-icons{display:flex;gap:35px;margin-top:35px;flex-wrap:wrap;}
+        .contact-icons a img{width:65px;height:65px;border-radius:50%;transition:all 0.3s;box-shadow:0 6px 20px rgba(0,0,0,0.6);}
+        .contact-icons a:hover img{transform:scale(1.35);box-shadow:0 12px 35px rgba(255,215,0,0.7);}
+        .copyright{text-align:center;padding:35px;background:#003300;margin-top:60px;font-size:1rem;border-top:2px solid #004d00;}
 
         @media(max-width:992px){.grid-4{grid-template-columns:repeat(2,1fr);}}
         @media(max-width:576px){.grid-4{grid-template-columns:1fr;}.btn{font-size:1.1rem;padding:12px 25px;}}
@@ -98,64 +107,78 @@
     <h1 class="title">Chơi Game 88T – Uy Tín Số 1 Việt Nam 2025</h1>
     <img src="https://choigame88t.github.io/banner.jpg" alt="Banner Chơi Game 88T 2025" class="banner">
 
-    <!-- NÚT GIFTCODE ĐỎ ĐẸP -->
+    <!-- NÚT ĐỎ ĐẸP NHẤT -->
     <div class="big-cta">
         <a href="https://x4r21kdd.com?key=3217653&sdmode=5" target="_blank" rel="nofollow">
-            ĐĂNG KÝ NHẬN GIFTCODE<br><span style="font-size:2.4rem;">NGAY HÔM NAY</span>
+            ĐĂNG KÝ NHẬN GIFTCODE<br><span>NGAY HÔM NAY</span>
         </a>
     </div>
+
+    <!-- BÀI VIẾT GIỮA TRANG – CHUẨN SEO CÓ H2 H3 H4 -->
+    <section class="intro-section">
+        <h2>Chơi Game 88T – Cổng Game Bài Đổi Thưởng Uy Tín Số 1 Việt Nam 2025</h2>
+        
+        <p>
+            <strong><a href="https://x4r21kdd.com?key=3217653&sdmode=5" target="_blank" rel="nofollow">Chơi Game 88T</a></strong> 
+            (tên miền chính thức <strong>choigame88t</strong>) là cổng game bài đổi thưởng và giải trí trực tuyến hàng đầu Việt Nam với hơn 5 năm hoạt động ổn định.
+        </p>
+
+        <img src="https://choigame88t.github.io/banner.jpg" alt="Chơi Game 88T - Nổ hũ, Casino, Thể Thao, Bắn Cá uy tín nhất 2025">
+
+        <h3>Tại sao hàng triệu người chọn Chơi Game 88T?</h3>
+        <ul>
+            <li>Nạp rút tự động 1:1 – duyệt lệnh chỉ trong 30 giây</li>
+            <li>Giftcode tân thủ miễn phí từ 50K – 200K mỗi ngày</li>
+            <li>Hệ thống game đa dạng: Nổ hũ, Casino, Thể Thao, Bắn Cá, Game Bài 3D</li>
+            <li>Jackpot nổ hũ khủng – đã chi trả hàng trăm tỷ đồng</li>
+            <li>Hỗ trợ 24/7 qua Hotline và Zalo @Game88T</li>
+            <li>Cam kết minh bạch 100%, không gian lận</li>
+        </ul>
+
+        <h3>Các sản phẩm HOT nhất tại 88T 2025</h3>
+        <h4>1. Nổ Hũ 88T – Jackpot nổ mỗi ngày</h4>
+        <p>Các tựa game Thần Tài, Avengers, Kim Cương… tỷ lệ nổ cực cao, nhiều thành viên đã trúng hơn 2 tỷ đồng.</p>
+
+        <h4>2. Casino Trực Tuyến đẳng cấp</h4>
+        <p>Baccarat, Roulette, Xóc Đĩa, Tài Xỉu livestream cùng dealer thật 24/24.</p>
+
+        <h4>3. Cá cược Thể Thao & Bắn Cá đổi thưởng</h4>
+        <p>Kèo bóng đá hấp dẫn + Bắn Cá 3D đồ họa siêu đẹp, tỷ lệ thưởng cao nhất thị trường.</p>
+
+        <div class="cta-end">
+            <a href="https://x4r21kdd.com?key=3217653&sdmode=5" target="_blank" rel="nofollow">
+                ĐĂNG KÝ NHẬN GIFTCODE NGAY HÔM NAY
+            </a>
+        </div>
+    </section>
 
     <!-- SẢN PHẨM HOT – 2 HÀNG × 4 Ô -->
     <section class="section" id="games">
         <h2 class="section-title">Sản Phẩm Hot Nhất</h2>
         <div class="grid-4">
-            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Casino Trực Tuyến 88T"><h3>Casino Trực Tuyến</h3></div>
-            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Nổ Hũ Jackpot 88T"><h3>Nổ Hũ Jackpot</h3></div>
-            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Cá Cược Thể Thao 88T"><h3>Cá Cược Thể Thao</h3></div>
-            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Xổ Số 3 Miền 88T"><h3>Xổ Số 3 Miền</h3></div>
-            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="E-Sports 88T"><h3>E-Sports</h3></div>
-            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Bắn Cá Đổi Thưởng 88T"><h3>Bắn Cá Đổi Thưởng</h3></div>
-            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Game Bài 3D 88T"><h3>Game Bài 3D</h3></div>
-            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Slot Game 88T"><h3>Slot Game</h3></div>
+            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Casino"><h3>Casino Trực Tuyến</h3></div>
+            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Nổ Hũ"><h3>Nổ Hũ Jackpot</h3></div>
+            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Thể Thao"><h3>Cá Cược Thể Thao</h3></div>
+            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Xổ Số"><h3>Xổ Số 3 Miền</h3></div>
+            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="E-Sports"><h3>E-Sports</h3></div>
+            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Bắn Cá"><h3>Bắn Cá Đổi Thưởng</h3></div>
+            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Game Bài"><h3>Game Bài 3D</h3></div>
+            <div class="card-game"><img src="https://choigame88t.github.io/logo.png" alt="Slot"><h3>Slot Game</h3></div>
         </div>
     </section>
 
-    <!-- HƯỚNG DẪN & TIN TỨC – ĐÃ PHỦ NỘI DUNG + LIÊN KẾT NỘI BỘ -->
+    <!-- HƯỚNG DẪN & TIN TỨC – CHỈ TIÊU ĐỀ + MÔ TẢ NGẮN NHƯ ẢNH -->
     <section class="section" id="blog">
         <h2 class="section-title">Hướng Dẫn & Tin Tức Mới Nhất</h2>
         <div class="grid-blog">
-            <div class="card-blog">
-                <h3>Hướng dẫn đăng ký 88T mới nhất 2025</h3>
-                <p>Chỉ 30 giây có tài khoản – nhận ngay giftcode tân thủ lên đến 200K. Đăng ký tại <a href="https://choigame88t.github.io/" style="color:#ff6b35;">trang chủ 88T</a> cực nhanh và an toàn.</p>
-            </div>
-            <div class="card-blog">
-                <h3>Cách nạp tiền siêu nhanh qua Momo</h3>
-                <p>Tỷ lệ 1:1 – tiền về ngay trong 10 giây. Hỗ trợ tất cả ngân hàng và ví điện tử. Xem chi tiết tại <a href="https://choigame88t.github.io/nap-tien.html">hướng dẫn nạp tiền 88T</a>.</p>
-            </div>
-            <div class="card-blog">
-                <h3>Hướng dẫn rút tiền về ngân hàng</h3>
-                <p>Rút không giới hạn – duyệt tự động 24/7. Nhiều thành viên đã rút thành công hàng trăm triệu mỗi ngày. Chi tiết tại <a href="https://choigame88t.github.io/rut-tien.html">rút tiền 88T</a>.</p>
-            </div>
-            <div class="card-blog">
-                <h3>Giftcode 88T miễn phí hôm nay</h3>
-                <p>Cập nhật liên tục code 50K - 200K mỗi ngày. Nhận ngay tại <a href="https://choigame88t.github.io/giftcode.html">trang giftcode 88T chính thức</a>.</p>
-            </div>
-            <div class="card-blog">
-                <h3>Cách chơi Nổ Hũ thắng lớn tại 88T</h3>
-                <p>Mẹo quay hũ dễ nổ từ các cao thủ lâu năm. Jackpot đã nổ hơn 2 tỷ đồng. Xem ngay tại <a href="https://choigame88t.github.io/">Chơi Game 88T</a>.</p>
-            </div>
-            <div class="card-blog">
-                <h3>Khuyến mãi hoàn tiền hàng tuần</h3>
-                <p>Hoàn tới 1.5% không giới hạn mỗi tuần. Áp dụng cho tất cả thành viên. Chi tiết chương trình tại <a href="https://choigame88t.github.io/">trang chủ 88T</a>.</p>
-            </div>
-            <div class="card-blog">
-                <h3>Sự kiện sinh nhật thành viên</h3>
-                <p>Quà tặng lên đến 88 triệu mỗi tháng dành riêng cho thành viên lâu năm. Đăng ký ngay hôm nay tại <a href="https://x4r21kdd.com?key=3217653&sdmode=5" target="_blank">88T</a>.</p>
-            </div>
-            <div class="card-blog">
-                <h3>Tại sao chọn Chơi Game 88T?</h3>
-                <p>Uy tín 5 năm – nạp rút nhanh nhất Việt Nam – hỗ trợ 24/7. Hàng triệu người đã tin tưởng. Trải nghiệm ngay tại <a href="https://choigame88t.github.io/">choigame88t.github.io</a>.</p>
-            </div>
+            <div class="card-blog"><h3>Hướng dẫn đăng ký 88T mới nhất 2025</h3><p>Chỉ 30 giây có tài khoản – nhận ngay giftcode tân thủ</p></div>
+            <div class="card-blog"><h3>Cách nạp tiền siêu nhanh qua Momo</h3><p>Tỷ lệ 1:1 – tiền về ngay trong 10 giây</p></div>
+            <div class="card-blog"><h3>Hướng dẫn rút tiền về ngân hàng</h3><p>Rút không giới hạn – duyệt tự động 24/7</p></div>
+            <div class="card-blog"><h3>Giftcode 88T miễn phí hôm nay</h3><p>Cập nhật liên tục code 50K - 200K</p></div>
+            <div class="card-blog"><h3>Cách chơi Nổ Hũ thắng lớn</h3><p>Mẹo quay hũ dễ nổ từ cao thủ 88T</p></div>
+            <div class="card-blog"><h3>Khuyến mãi hoàn tiền hàng tuần</h3><p>Hoàn tới 1.5% không giới hạn mỗi tuần</p></div>
+            <div class="card-blog"><h3>Sự kiện sinh nhật thành viên</h3><p>Quà tặng lên đến 88 triệu mỗi tháng</p></div>
+            <div class="card-blog"><h3>Tại sao chọn Chơi Game 88T?</h3><p>Uy tín 5 năm – nạp rút nhanh nhất VN</p></div>
         </div>
     </section>
 
