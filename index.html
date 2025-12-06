@@ -32,7 +32,17 @@
         nav a:hover{color:#ffd700;}
 
         h1.title{text-align:center;font-size:3.2rem;color:#ffd700;margin:30px 0;text-shadow:0 0 20px #000, 3px 3px 0 #c0392b;}
-        .banner{max-width:1400px;margin:20px auto;border-radius:20px;border:5px solid gold;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+
+        /* BANNER MỚI ĐẦU TRANG – HIỂN THỊ RÕ, KHÔNG BỊ CHE, MOBILE ĐẸP */
+        .banner-main{
+            width:100%;
+            max-width:1400px;
+            margin:20px auto;
+            border-radius:20px;
+            border:6px solid #ffd700;
+            box-shadow:0 15px 50px rgba(255,215,0,0.4);
+            display:block;
+        }
 
         .cta-end{text-align:center;margin:60px 0;}
         .cta-end a{display:inline-block;background:#e74c3c;color:#fff;padding:26px 80px;border-radius:60px;font-size:2.2rem;font-weight:bold;
@@ -47,7 +57,15 @@
         .intro-section p{font-size:1.18rem;color:#eee;text-align:justify;margin-bottom:22px;}
         .intro-section ul{margin:30px 0;padding-left:45px;}
         .intro-section ul li{font-size:1.15rem;color:#ddd;margin:15px 0;}
-        .intro-section img{border-radius:18px;border:5px solid #ffd700;box-shadow:0 15px 40px rgba(0,0,0,0.7);margin:40px auto;}
+        /* BANNER TRONG BÀI VIẾT – GIỮ LẠI BANNER CŨ, ĐẸP NHƯ TRƯỚC */
+        .intro-section img{
+            border-radius:18px;
+            border:5px solid #ffd700;
+            box-shadow:0 15px 40px rgba(0,0,0,0.7);
+            margin:40px auto;
+            max-width:100%;
+            height:auto;
+        }
 
         .section{padding:70px 20px;}
         .section-title{font-size:2.8rem;text-align:center;color:#ffd700;margin-bottom:60px;position:relative;}
@@ -101,10 +119,10 @@
 
     <h1 class="title">Chơi Game 88T – Uy Tín Số 1 Việt Nam 2025</h1>
 
-    <!-- BANNER MỚI CHÍNH LÀ FILE SẾP VỪA TẢI LÊN -->
-    <img src="https://choigame88t.github.io/banner-moi.png" alt="Chơi Game 88T 2025 - Khuyến mãi nạp đầu 88%" class="banner">
+    <!-- BANNER MỚI ĐẦU TRANG – RÕ RÀNG, KHÔNG BỊ CHE TRÊN MOBILE -->
+    <img src="https://choigame88t.github.io/banner-moi.png" alt="Chơi Game 88T 2025 - Khuyến mãi nạp đầu 88%" class="banner-main">
 
-    <!-- BÀI VIẾT GIỮA TRANG – VẪN DÙNG BANNER MỚI ĐỂ ĐẸP NHẤT -->
+    <!-- BÀI VIẾT GIỮA TRANG – DÙNG LẠI BANNER CŨ ĐẸP NHƯ TRƯỚC -->
     <section class="intro-section">
         <h2>Chơi Game 88T – Cổng Game Bài Đổi Thưởng Uy Tín Số 1 Việt Nam 2025</h2>
         
@@ -113,7 +131,8 @@
             (tên miền chính thức <strong>choigame88t</strong>) là cổng game bài đổi thưởng và giải trí trực tuyến hàng đầu Việt Nam với hơn 5 năm hoạt động ổn định.
         </p>
 
-        <img src="https://choigame88t.github.io/banner-moi.png" alt="Chơi Game 88T - Nổ hũ, Casino, Thể Thao, Bắn Cá uy tín nhất 2025">
+        <!-- GIỮ LẠI BANNER CŨ TRONG BÀI VIẾT -->
+        <img src="https://choigame88t.github.io/banner.jpg" alt="Chơi Game 88T - Nổ hũ, Casino, Thể Thao, Bắn Cá uy tín nhất 2025">
 
         <h3>Tại sao hàng triệu người chọn Chơi Game 88T?</h3>
         <ul>
@@ -142,6 +161,7 @@
         </div>
     </section>
 
+    <!-- PHẦN CÒN LẠI GIỮ NGUYÊN -->
     <section class="section" id="games">
         <h2 class="section-title">Sản Phẩm Hot Nhất</h2>
         <div class="grid-4">
