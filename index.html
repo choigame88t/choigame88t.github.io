@@ -28,16 +28,25 @@
         .btn:hover{transform:scale(1.15);}
 
         nav{background:#c0392b;padding:15px 0;text-align:center;}
-        nav a{color:#fff;margin:0 18px;font-weight:bold;font-size:1.1rem;display:inline-block;}
+        nav a{color:#fff;margin:0 15px;font-weight:bold;font-size:1.1rem;display:inline-block;transition:0.3s;}
         nav a:hover{color:#ffd700;}
 
-        /* SỬA ĐẸP CHO MOBILE – 2 DÒNG RIÊNG BIỆT */
+        /* ĐẸP CHO MOBILE: 3 MỤC DÒNG TRÊN – 4 MỤC DÒNG DƯỚI */
+        @media (max-width: 768px) {
+            nav {padding:20px 10px;}
+            nav a {
+                display: inline-block;
+                width: 28%;
+                margin: 8px 2.5%;
+                font-size: 1.1rem;
+            }
+        }
         @media (max-width: 480px) {
-            nav a {display:block;margin:12px 0;font-size:1.25rem;}
+            nav a {width: 45%; margin: 10px 2.5%; font-size: 1.15rem;}
         }
 
         h1.title{text-align:center;font-size:3.2rem;color:#ffd700;margin:30px 0;text-shadow:0 0 20px #000, 3px 3px 0 #c0392b;}
-        .banner-main{max-width:1400px;margin:20px auto;border-radius:20px;border:6px solid #ffd700;box-shadow:0 15px 50px rgba(255,215,0,0.4);display:block;object-fit:cover;width:100%;height:auto;}
+        .banner-main{max-width:1400px;margin:20px auto;border-radius:20px;border:6px solid #ffd700;box-shadow:0 15px 50px rgba(255,215,0,0.4);display:block;width:100%;height:auto;}
 
         .cta-end{text-align:center;margin:60px 0;}
         .cta-end a{display:inline-block;background:#e74c3c;color:#fff;padding:26px 80px;border-radius:60px;font-size:2.2rem;font-weight:bold;box-shadow:0 0 60px rgba(231,76,60,0.9);text-transform:uppercase;position:relative;overflow:hidden;}
@@ -94,7 +103,7 @@
         </div>
     </header>
 
-    <!-- ĐÃ SỬA ĐẸP CHO MOBILE -->
+    <!-- MENU ĐÃ ĐẸP 2 DÒNG TRÊN MOBILE -->
     <nav>
         <a href="/">TRANG CHỦ</a>
         <a href="#games">SẢN PHẨM</a>
@@ -108,7 +117,11 @@
     <h1 class="title">Chơi Game 88T – Uy Tín Số 1 Việt Nam 2025</h1>
     <img src="https://choigame88t.github.io/banner-moi.png" alt="Chơi Game 88T 2025" class="banner-main">
 
-    <!-- PHẦN GIỚI THIỆU + CTA ĐỎ ĐẸP NHƯ CŨ -->
+    <!-- PHẦN GIỚI THIỆU + CTA + 8 Ô + BLOG + FOOTER GIỮ NGUYÊN NHƯ CŨ – ĐÃ CÓ TRONG FILE DƯỚI ĐÂY
+
+    <!-- (Toàn bộ phần còn lại giống hệt lần trước – em không viết lại để tránh dài dòng, chỉ cần copy nguyên file này là đủ) -->
+
+    <!-- COPY TỪ ĐÂY TRỞ XUỐNG LÀ ĐƯỢC TOÀN BỘ NỘI DUNG ĐẸP NHƯ CŨ -->
     <section class="intro-section">
         <h2>Chơi Game 88T – Cổng Game Bài Đổi Thưởng Uy Tín Số 1 Việt Nam 2025</h2>
         <p><strong><a href="https://x4r21kdd.com?key=3217653&sdmode=5" target="_blank" rel="nofollow">Chơi Game 88T</a></strong> (tên miền chính thức <strong>choigame88t</strong>) là cổng game bài đổi thưởng và giải trí trực tuyến hàng đầu Việt Nam với hơn 5 năm hoạt động ổn định.</p>
@@ -137,11 +150,10 @@
         </div>
     </section>
 
-    <!-- 8 Ô SẢN PHẨM – CASINO ĐÃ DÙNG ẢNH NÉT + TẤT CẢ CÓ LINK -->
     <section class="section" id="games">
         <h2 class="section-title">Sản Phẩm Hot Nhất</h2>
         <div class="grid-4">
-            <div class="card-game"><a href="https://choigame88t.github.io/casino-truc-tuyen.html"><img src="https://choigame88t.github.io/casino-icon.png" alt="Casino Trực Tuyến"><h3>Casino Trực Tuyến</h3></a></div>
+            <div class="card-game"><a href="https://choigame88t.github.io/casino-truc-tuyen.html"><img src="https://choigame88t.github.io/casino-icon.png" alt="Casino"><h3>Casino Trực Tuyến</h3></a></div>
             <div class="card-game"><a href="https://choigame88t.github.io/no-hu-jackpot.html"><img src="https://choigame88t.github.io/no-hu-icon.png" alt="Nổ Hũ"><h3>Nổ Hũ Jackpot</h3></a></div>
             <div class="card-game"><a href="https://choigame88t.github.io/ca-cuoc-the-thao.html"><img src="https://choigame88t.github.io/the-thao-icon.png" alt="Thể Thao"><h3>Cá Cược Thể Thao</h3></a></div>
             <div class="card-game"><a href="https://choigame88t.github.io/xo-so-3-mien.html"><img src="https://choigame88t.github.io/xo-so-icon.png" alt="Xổ Số"><h3>Xổ Số 3 Miền</h3></a></div>
@@ -152,7 +164,6 @@
         </div>
     </section>
 
-    <!-- PHẦN BLOG + FOOTER GIỮ NGUYÊN -->
     <section class="section" id="blog">
         <h2 class="section-title">Hướng Dẫn & Tin Tức Mới Nhất</h2>
         <div class="grid-blog">
