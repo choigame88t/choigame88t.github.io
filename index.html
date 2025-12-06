@@ -28,21 +28,35 @@
         .btn:hover{transform:scale(1.15);}
 
         nav{background:#c0392b;padding:15px 0;text-align:center;}
-        nav a{color:#fff;margin:0 15px;font-weight:bold;font-size:1.1rem;display:inline-block;transition:0.3s;}
+        nav a{color:#fff;margin:0 18px;font-weight:bold;font-size:1.15rem;display:inline-block;transition:0.3s;}
         nav a:hover{color:#ffd700;}
 
-        /* ĐẸP CHO MOBILE: 3 MỤC DÒNG TRÊN – 4 MỤC DÒNG DƯỚI */
+        /* CHỈ MOBILE MỚI CHIA 2 DÒNG NGANG – PC GIỮ NGUYÊN 1 DÒNG */
         @media (max-width: 768px) {
-            nav {padding:20px 10px;}
+            nav {
+                padding: 18px 10px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px 30px;
+            }
             nav a {
-                display: inline-block;
-                width: 28%;
-                margin: 8px 2.5%;
+                flex: 0 0 calc(33.333% - 20px);
+                margin: 0;
                 font-size: 1.1rem;
+            }
+            nav a:nth-child(n+4) {
+                flex: 0 0 calc(25% - 20px);
             }
         }
         @media (max-width: 480px) {
-            nav a {width: 45%; margin: 10px 2.5%; font-size: 1.15rem;}
+            nav a {
+                flex: 0 0 calc(33.333% - 15px);
+                font-size: 1.05rem;
+            }
+            nav a:nth-child(n+4) {
+                flex: 0 0 calc(25% - 15px);
+            }
         }
 
         h1.title{text-align:center;font-size:3.2rem;color:#ffd700;margin:30px 0;text-shadow:0 0 20px #000, 3px 3px 0 #c0392b;}
@@ -90,7 +104,7 @@
         .copyright{text-align:center;padding:35px;background:#003300;margin-top:60px;font-size:1rem;border-top:2px solid #004d00;}
 
         @media(max-width:992px){.grid-4{grid-template-columns:repeat(2,1fr);}}
-        @media(max-width:576px){.grid-4{grid-template-columns:1fr;}.btn{font-size:1.1rem;padding:12px 25px;}}
+        @media(max-width:576px){.grid-4{grid-template-columns:1fr;}}
     </style>
 </head>
 <body>
@@ -103,7 +117,7 @@
         </div>
     </header>
 
-    <!-- MENU ĐÃ ĐẸP 2 DÒNG TRÊN MOBILE -->
+    <!-- MENU ĐẸP: PC 1 DÒNG – MOBILE 2 DÒNG NGANG (3 + 4) -->
     <nav>
         <a href="/">TRANG CHỦ</a>
         <a href="#games">SẢN PHẨM</a>
@@ -114,14 +128,10 @@
         <a href="rut-tien.html">RÚT TIỀN</a>
     </nav>
 
+    <!-- TOÀN BỘ NỘI DUNG GIỮ NGUYÊN ĐẸP NHƯ CŨ -->
     <h1 class="title">Chơi Game 88T – Uy Tín Số 1 Việt Nam 2025</h1>
     <img src="https://choigame88t.github.io/banner-moi.png" alt="Chơi Game 88T 2025" class="banner-main">
 
-    <!-- PHẦN GIỚI THIỆU + CTA + 8 Ô + BLOG + FOOTER GIỮ NGUYÊN NHƯ CŨ – ĐÃ CÓ TRONG FILE DƯỚI ĐÂY
-
-    <!-- (Toàn bộ phần còn lại giống hệt lần trước – em không viết lại để tránh dài dòng, chỉ cần copy nguyên file này là đủ) -->
-
-    <!-- COPY TỪ ĐÂY TRỞ XUỐNG LÀ ĐƯỢC TOÀN BỘ NỘI DUNG ĐẸP NHƯ CŨ -->
     <section class="intro-section">
         <h2>Chơi Game 88T – Cổng Game Bài Đổi Thưởng Uy Tín Số 1 Việt Nam 2025</h2>
         <p><strong><a href="https://x4r21kdd.com?key=3217653&sdmode=5" target="_blank" rel="nofollow">Chơi Game 88T</a></strong> (tên miền chính thức <strong>choigame88t</strong>) là cổng game bài đổi thưởng và giải trí trực tuyến hàng đầu Việt Nam với hơn 5 năm hoạt động ổn định.</p>
@@ -142,7 +152,6 @@
         <p>Baccarat, Roulette, Xóc Đĩa, Tài Xỉu livestream cùng dealer thật 24/24.</p>
         <h4>3. Cá cược Thể Thao & Bắn Cá đổi thưởng</h4>
         <p>Kèo bóng đá hấp dẫn + Bắn Cá 3D đồ họa siêu đẹp, tỷ lệ thưởng cao nhất thị trường.</p>
-
         <div class="cta-end">
             <a href="https://x4r21kdd.com?key=3217653&sdmode=5" target="_blank" rel="nofollow">
                 ĐĂNG KÝ NHẬN GIFTCODE<br><span>NGAY HÔM NAY</span>
@@ -153,7 +162,7 @@
     <section class="section" id="games">
         <h2 class="section-title">Sản Phẩm Hot Nhất</h2>
         <div class="grid-4">
-            <div class="card-game"><a href="https://choigame88t.github.io/casino-truc-tuyen.html"><img src="https://choigame88t.github.io/casino-icon.png" alt="Casino"><h3>Casino Trực Tuyến</h3></a></div>
+            <div class="card-game"><a href="https://choigame88t.github.io/casino-truc-tuyen.html"><img src="https://choigame88t.github.io/casino-icon.png" alt="Casino Trực Tuyến"><h3>Casino Trực Tuyến</h3></a></div>
             <div class="card-game"><a href="https://choigame88t.github.io/no-hu-jackpot.html"><img src="https://choigame88t.github.io/no-hu-icon.png" alt="Nổ Hũ"><h3>Nổ Hũ Jackpot</h3></a></div>
             <div class="card-game"><a href="https://choigame88t.github.io/ca-cuoc-the-thao.html"><img src="https://choigame88t.github.io/the-thao-icon.png" alt="Thể Thao"><h3>Cá Cược Thể Thao</h3></a></div>
             <div class="card-game"><a href="https://choigame88t.github.io/xo-so-3-mien.html"><img src="https://choigame88t.github.io/xo-so-icon.png" alt="Xổ Số"><h3>Xổ Số 3 Miền</h3></a></div>
