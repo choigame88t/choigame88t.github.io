@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://choigame88t.github.io/sitemap.xml
